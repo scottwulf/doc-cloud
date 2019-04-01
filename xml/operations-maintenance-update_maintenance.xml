@@ -6,13 +6,13 @@
 <!ENTITY % entities SYSTEM "entities.ent"> %entities;
 ]>
 <section xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="maintenance_update">
- <title>&lcm; Maintenance Update Procedure</title>
+ <title>&clm; Maintenance Update Procedure</title>
  <procedure>
   <title>Preparing for Update</title>
   <step>
    <para>
     Ensure that the update repositories have been properly set up on all nodes.
-    The easiest way to provide the required repositories on the &lcm; Server is
+    The easiest way to provide the required repositories on the &clm; Server is
     to set up an &smt; server as described in
     <xref linkend="app.deploy.smt_lcm"/>. Alternatives to setting up an
     &smt; server are described in <xref linkend="cha.depl.repo_conf_lcm"/>.
@@ -106,7 +106,7 @@
      </step>
      <step>
       <para>
-       Initialize the &lcm; and prepare the update playbooks.
+       Initialize the &clm; and prepare the update playbooks.
       </para>
       <substeps>
        <step>
@@ -157,6 +157,16 @@
        <listitem>
         <para>
          <filename>ardana-update-status.yml</filename>
+        </para>
+        <para>
+         <filename>ardana-update-status.yml</filename> parameters
+         <literal>update_status_var</literal>,
+         <literal>update_status_set</literal>, and
+         <literal>update_status_reset</literal> have been deprecated. Please
+         use the newly introduced parameters
+         <literal>pending_clm_update</literal>,
+         <literal>pending_service_update</literal>, and
+         <literal>pending_system_reboot</literal>.
         </para>
        </listitem>
        <listitem>
@@ -245,7 +255,7 @@ package updates] ***</screen>
       </para>
       <screen>&prompt.ardana;cd ~/scratch/ansible/next/ardana/ansible
 &prompt.ardana;ansible-playbook -i hosts/verb_hosts ardana-update-status.yml \
---limit ardana-cp1-c1-m2 -e update_status_var=system-reboot</screen>
+--limit ardana-cp1-c1-m2</screen>
      </step>
      <step>
       <para>
@@ -254,8 +264,7 @@ package updates] ***</screen>
       <screen>&prompt.ardana;cd ~/scratch/ansible/next/ardana/ansible
 &prompt.ardana;ansible-playbook -i hosts/verb_hosts ardana-update-status.yml \
 --limit ardana-cp1-c1-m2 \
--e update_status_var=system-reboot \
--e update_status_reset=true</screen>
+-e pending_system_reboot=off</screen>
      </step>
      <step>
       <para>

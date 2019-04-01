@@ -26,10 +26,10 @@
      RHEL-compatible packages to nodes in the cloud.
     </para>
 <screen>&prompt.sudo;smt-setup-custom-repos --name CentOS --description "CentOS 7.5" --productid 100682 \
-  https://download.opensuse.org/repositories/systemsmanagement:/Ardana:/8:/CentOS:/7.5/CentOS_7.5/
+  --exturl https://download.opensuse.org/repositories/systemsmanagement:/Ardana:/8:/CentOS:/7.5/CentOS_7.5/
 &prompt.sudo;smt-repos -e CentOS
 &prompt.sudo;smt-sync
-&prompt.sudo;sudo smt-mirror</screen>
+&prompt.sudo;smt-mirror</screen>
    </step>
    <step>
     <para>
@@ -48,7 +48,7 @@
    </step>
    <step>
     <para>
-     Add this new repo as a Yum package source to cloud nodes by populating
+     Add this new repo as a yum package source to cloud nodes by populating
      <filename>/etc/yum.repos.d/ardana-centos.repo</filename> in each
      &rhla; system with the following contents:
     </para>
@@ -87,60 +87,50 @@ done</screen>
  <section xml:id="sec.install_rhel_compute_node.yum-ardana">
   <title>Package Dependencies for &rhla; &compnode;s</title>
   <para>
+   <literal>RHBA-2018:2198</literal> to be installed for proper DVR
+   functionality. (If this is not done, attempts to create Floating IP
+   resources for VMs on &rhla; &compnode;s will fail, as documented in the
+   <link xlink:href="http://access.redhat.com/solutions/3449511">Red Hat
+   Knowledge Base</link>.) This update can be downloaded via an active &rhla;
+   license, and should be applied after the node's operating system is
+   installed. If this results in a change to the kernel version (to the
+   target of 3.10.0-862), a reboot will be required.
+  </para>
+  <para>
    To use the &ostack-current; version of
-   <literal>nova-compute</literal>, <literal>qemu-kvm</literal> and
-   <literal>libcacard-ev</literal> packages with versions
-   of at least 2.10.0 must be installed on &rhla; nodes.
+   <literal>nova-compute</literal> and <literal>qemu-kvm</literal>,
+   virtualization packages with versions of at least 2.10.0 must be installed
+   on &rhla; nodes.
   </para>
   <para>
    The RPM files needed for these packages must be
    provided before executing <filename>site.yml</filename>. It is expected
-   that a &rhla; subscription will be used to provide these RPM packages so
-   that the latest version is installed and continuous updates will be available.
-  </para>
-  <para>
-   The packages can also be can be downloaded from <link
-   xlink:href="http://vault.centos.org/centos/7.5.1804/virt/x86_64/kvm-common/"/>.
-   The following RPM packages from that location have been tested successfully:
+   that a &rh; Virtualization product subscription will be used to provide
+   these RPM packages, ensuring that the latest version is installed and
+   that continuous updates will be available.
   </para>
   <itemizedlist>
    <listitem>
     <para>
-     <filename>qemu-img-ev-2.10.0-21.el7_5.4.1.x86_64.rpm</filename>
+     <filename>qemu-img-rhev</filename>
     </para>
    </listitem>
    <listitem>
     <para>
-     <filename>qemu-kvm-common-ev-2.10.0-21.el7_5.4.1.x86_64.rpm</filename>
+     <filename>qemu-kvm-common-rhev</filename>
     </para>
    </listitem>
    <listitem>
     <para>
-     <filename>qemu-kvm-ev-2.10.0-21.el7_5.4.1.x86_64.rpm</filename>
+     <filename>qemu-kvm-rhev</filename>
     </para>
    </listitem>
    <listitem>
     <para>
-     <filename>qemu-kvm-tools-ev-2.10.0-21.el7_5.4.1.x86_64.rpm</filename>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <filename>libcacard-ev-2.3.0-31.0.el7_2.21.1.x86_64.rpm</filename>
+     <filename>qemu-kvm-tools-rhev</filename>
     </para>
    </listitem>
   </itemizedlist>
-  <para>
-   Note that, in the case of migrating from a previous version of these
-   packages, they should be installed using <command>rpm -U <replaceable>FILENAME</replaceable></command>
-   rather than <command>rpm -i <replaceable>FILENAME</replaceable></command>.
-  </para>
-  <para>
-   All of the RPM packages should be installed together and not individually, as
-   shown below:
-  </para>
-  <screen>&prompt.sudo;rpm -Uvh qemu-img-ev-*.rpm qemu-kvm-common-ev-*.rpm \
-  qemu-kvm-ev-*.rpm qemu-kvm-tools-ev-*.rpm libcacard-ev-*.rpm</screen>
  </section>
  <section xml:id="sec.install_rhel_compute_node.deploying">
   <title>Deploying &rhla; &compnode;s</title>
@@ -148,13 +138,13 @@ done</screen>
    SELinux policy updates are needed for
    <literal>nova-compute</literal> to work properly. SELinux policy updates can be
    enabled by changing a flag in default configuration. This needs to be
-   done on the &lcm; <emphasis>before</emphasis> <literal>nova-compute</literal>
+   done on the &clm; <emphasis>before</emphasis> <literal>nova-compute</literal>
    is installed on &rhla; nodes.
   </para>
   <procedure>
    <step>
     <para>
-     On the &lcm; node, edit the following file:
+     On the &clm; node, edit the following file:
     </para>
 <screen>cd ~/openstack/ardana/ansible
 vi roles/NOV-CMP-KVM/defaults/main.yml</screen>

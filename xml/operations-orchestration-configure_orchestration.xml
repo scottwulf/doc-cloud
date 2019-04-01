@@ -39,7 +39,7 @@
  <orderedlist>
   <listitem>
    <para>
-    Log in to the &lcm;.
+    Log in to the &clm;.
    </para>
   </listitem>
   <listitem>
@@ -90,13 +90,13 @@ hidden_stack_tags="&lt;hidden_tag&gt;"</screen>
   To begin using the feature, use these steps to create a Heat stack using the
   defined hidden tag. You will need to use credentials that have the Heat admin
   permissions. In the example steps below we are going to do this from the
-  &lcm; using the <literal>admin</literal> credentials and a Heat
+  &clm; using the <literal>admin</literal> credentials and a Heat
   template named <literal>heat.yaml</literal>:
  </para>
  <orderedlist>
   <listitem>
    <para>
-    Log in to the &lcm;.
+    Log in to the &clm;.
    </para>
   </listitem>
   <listitem>
@@ -109,12 +109,12 @@ hidden_stack_tags="&lt;hidden_tag&gt;"</screen>
    <para>
     Create a Heat stack using this feature:
    </para>
-<screen>&prompt.ardana;openstack stack create -f heat.yaml hidden-stack --tags hidden</screen>
+<screen>&prompt.ardana;openstack stack create -f heat.yaml hidden_stack_tags --tags hidden</screen>
   </listitem>
   <listitem>
    <para>
     If you list your Heat stacks, your hidden one will not show unless you use
-    the <literal>--show-hidden</literal> switch.
+    the <literal>--hidden</literal> switch.
    </para>
    <para>
     Example, not showing hidden stacks:
@@ -123,7 +123,7 @@ hidden_stack_tags="&lt;hidden_tag&gt;"</screen>
    <para>
     Example, showing the hidden stacks:
    </para>
-<screen>&prompt.ardana;openstack stack list --show-hidden</screen>
+<screen>&prompt.ardana;openstack stack list --hidden</screen>
   </listitem>
  </orderedlist>
 </section>

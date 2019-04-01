@@ -141,32 +141,6 @@
       be used to network install the operating system.
      </entry>
     </row>
-    <row vendor="hpe">
-     <entry>distro-id (optional)</entry>
-     <entry>
-      <para>
-       The name of the cobbler server profile to be used when the servers file
-       is used for operating system installation. Supported values are:
-      </para>
-      <itemizedlist>
-       <listitem>
-        <para>
-         hlinux-x86_64 (default)
-        </para>
-       </listitem>
-       <listitem>
-        <para>
-         rhel73-x86_64
-        </para>
-       </listitem>
-       <listitem>
-        <para>
-         rhel72-x86_64-multipath
-        </para>
-       </listitem>
-      </itemizedlist>
-     </entry>
-    </row>
     <row>
      <entry>kopt-extras (optional)</entry>
      <entry>
@@ -220,15 +194,15 @@
      <entry>hypervisor-id (optional)</entry>
      <entry>
       This attribute serves two purposes: it indicates that this server is a
-      virtual machine (VM), and it specifies the server id of the &lcm;
+      virtual machine (VM), and it specifies the server id of the &clm;
       hypervisor that will host the VM.
      </entry>
     </row>
     <row>
      <entry>ardana-hypervisor (optional)</entry>
      <entry>
-      When set to True, this attribute identifies a server as a &lcm;
-      hypervisor. A &lcm; hypervisor is a server that may be used to host
+      When set to True, this attribute identifies a server as a &clm;
+      hypervisor. A &clm; hypervisor is a server that may be used to host
       other servers that are themselves virtual machines. Default value is
       <literal>False</literal>.
      </entry>
