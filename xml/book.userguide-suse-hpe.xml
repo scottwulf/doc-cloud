@@ -10,6 +10,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="book.user">
  <title>User Guide Overview</title>
  <info>
+  <xi:include href="copyright_openstack.xml"/>
   <abstract>
    <para>
     This section contains user tasks for your &kw-hos-phrase; cloud.
