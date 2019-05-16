@@ -8,20 +8,28 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
  xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="poc-prerequisites">
  <title>Before you begin</title>
-<para>
-Understand use case for OpenStack
-How does it solve my problem?
-What projects am I using? (core services)
-How do I stand up OpenStack? See Config Guide (provide links)
- </para>
  <section xml:id="hardware-requirements">
   <title>Minimum hardware requirements</title>
   <para>
-   6 Nodes
-   1 Deployer (could be a VM)
-   2 Compute
-   3 Controller
+    Before you begin, the following minimum hardware requirements are needed:
   </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          1 Deployer node
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          2 Compute nodes
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          3 Controller nodes
+        </para>
+      </listitem>
+    </itemizedlist>
  </section>
 
  <section xml:id="configuration">

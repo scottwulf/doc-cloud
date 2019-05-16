@@ -14,8 +14,17 @@
  their users to provision resources through a web interface.
  </para>
  <para> SUSE'S &productname; provides easy to use installation and management workflows
- for OpenStac. cloud. It allows an entire OpenStack cloud environment to be modelled
+ for OpenStack cloud. It allows an entire OpenStack cloud environment to be modelled
  before deployment, and it deploys and updates the OpenStack cloud environment to
  match the models (even as the models are updated).
  </para>
+ <section xml:id="about-this-guide">
+   <title>About this guide</title>
+   <para>
+     The following guide is what is known as a Proof of Concept (POC) Guide.
+     A POC focuses on whether a test case can be turned into production-grade
+     implementation. The details within this guide are generic, and are only
+     meant to determine the feasibility of the idea or test case.
+   </para>
+  </section>
 </chapter>
