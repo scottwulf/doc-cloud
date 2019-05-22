@@ -21,7 +21,7 @@
  <section xml:id="about-this-guide">
    <title>About this guide</title>
    <para>
-     The following guide is what is known as a Proof of Concept (POC) Guide.
+     The following guide is what is known as a Proof of Concept (PoC) Guide.
      A POC focuses on whether a test case can be turned into production-grade
      implementation. The details within this guide are generic, and are only
      meant to determine the feasibility of the idea or test case.

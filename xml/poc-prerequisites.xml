@@ -32,6 +32,31 @@
     </itemizedlist>
  </section>
 
+ <section xml:id="software-requirements">
+  <title>Minimum software requirements</title>
+  <para>The following minimum software requirements are needed:
+  </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          KVM hypervisor
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <bold>OpenStack services:</bold> Identity service (keystone), Compute service (nova),
+          Block Storage service (cinder), Image service (glance),
+          Networking service (neutron), Dashboard service (horizon)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          &ses; powered by &ceph;
+        </para>
+      </listitem>
+     </itemizedlist>
+  </section>
+
  <section xml:id="configuration">
   <title>Configuration</title>
   <para>
@@ -42,13 +67,7 @@
   </para>
  </section>
 
- <section xml:id="software-requirements">
-  <title>Minimum software requirements</title>
-  <para>
-    KVM hypervisor
-    OpenStack: Keystone, Nova, Glance, Neutron (simple), Cinder (NFS backend), Horizon, Network
-  </para>
- </section>
+
 
  <section xml:id="define-networking">
   <title>Define networking</title>

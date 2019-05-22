@@ -12,7 +12,7 @@
   <abstract>
    <para>
      At the time of the &productnumber; release, this guide
-     is a proof of concept (POC) of a &productname; deployment.
+     is a proof of concept (PoC) of a &productname; deployment.
      This guide provides the basic steps for deployment
      &productname; &productnumber; in a bare metal environment.
      The audience is the admin-level operator of the cloud.
