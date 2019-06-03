@@ -15,6 +15,8 @@
  <section xml:id="ses-config"
   <title>SUSE Enterprise Storage configuration<title>
   <para>
+    Use content from Integrate OpenStack with SUSE Enterprise Storage section (Exercise 1)
+
     Link to SES integration chapter
     Basic config
     Resources

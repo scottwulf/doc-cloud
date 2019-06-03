@@ -14,6 +14,7 @@
  <section xml:id="install-os">
    <title>Install the operating system</title>
    <para>
+   Relates to: Exercise 1, task 1
    Register with SCC
    Update OS
    </para>
@@ -30,26 +31,31 @@
  <section xml:id="install-configure-SMT">
    <title>Install and configure the SMT server</title>
    <para>
+   Relates to: Exercise 1: Task 2
    Mirror required repositories
-   Remove SCC add ons
+   Remove SCC add ons (see note after task 3)
    Add local SMT mirrored repos
    </para>
  </section>
 
  <section xml:id="install-clm">
    <title>Install Cloud Lifecycle Manager</title>
+
  </section>
 
  <section xml:id="set-password">
    <title>Set password for user(s)</title>
+      Exercise 1: Task 4
  </section>
 
  <section xml:id="copy-sles-iso">
    <title>Copy SUSE Enterprise Linux ISO</title>
+      Exercise 1: Task 5
  </section>
 
  <section xml:id="initialize-clm">
    <title>Initialize Cloud Lifecycle Manager</title>
+   Exercise 3
  </section>
 
 </chapter>
