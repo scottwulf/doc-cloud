@@ -101,9 +101,10 @@ Specified repositories have been refreshed.</screen>
 Loading repository data...
 Reading installed packages...
 
-S | Name                          | Summary                                 | Type
---+-------------------------------+-----------------------------------------+--------
-i | venv-openstack-neutron-x86_64 | Python virtualenv for OpenStack Neutron | package</screen>
+S | Name                          | Summary                                  | Type
+--+-------------------------------+------------------------------------------+--------
+  | python-neutronclient          | Python API and CLI for OpenStack Neutron | package
+i | venv-openstack-neutron-x86_64 | Python virtualenv for OpenStack Neutron  | package</screen>
   </step>
   <step>
    <para>
