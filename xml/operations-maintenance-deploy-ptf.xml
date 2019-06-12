@@ -76,7 +76,7 @@
     Create or update the repository metadata:
    </para>
    <screen>&prompt.ardana;sudo /usr/local/sbin/createrepo-cloud-ptf
-Spawning worker 0 with 1 pkgs
+Spawning worker 0 with 2 pkgs
 Workers Finished
 Saving Primary metadata
 Saving file lists metadata
