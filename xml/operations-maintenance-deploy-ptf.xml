@@ -21,8 +21,8 @@
  <procedure>
   <step>
    <para>
-    When &suse; has developed a PTF, you will receive a URL for that PTF. It
-    will contain the entire Python virtual environment (venv). You should
+    When &suse; has developed a PTF, you will receive a URL for that PTF.
+    You should
     download the packages from the location provided by &suse; Support to a
     temporary location on the &clm;. Set the variables for your Support ID and
     password. For example:
