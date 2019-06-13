@@ -31,7 +31,7 @@
 &prompt.ardana;cd $tmpdir
 &prompt.ardana;wget --no-directories --recursive --reject "index.html*" \
 --user=<replaceable>USER_NAME</replaceable> \
---password=<replaceable>PASSWORD</replaceable> \
+--ask-password \
 --no-parent https://ptf.suse.com/5555ddddeeee6666/cloud9/042171/x86_64/20181030/</screen>
   </step>
   <step>
