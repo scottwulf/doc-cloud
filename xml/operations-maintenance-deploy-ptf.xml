@@ -69,7 +69,7 @@ Saving other metadata</screen>
    <para>
     Refresh the PTF repository before installing package updates on the &clm;
    </para>
-   <screen>&prompt.ardana;sudo zypper refresh -fr PTF
+   <screen>&prompt.ardana;sudo zypper refresh --force --repo PTF
 Forcing raw metadata refresh
 Retrieving repository 'PTF' metadata ..........................................[done]
 Forcing building of repository cache
@@ -80,7 +80,7 @@ Specified repositories have been refreshed.</screen>
    <para>
     The PTF shows as available on the deployer.
    </para>
-   <screen>&prompt.ardana;sudo zypper se -r PTF
+   <screen>&prompt.ardana;sudo zypper se --repo PTF
 Loading repository data...
 Reading installed packages...
 
