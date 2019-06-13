@@ -182,7 +182,7 @@ drwxr-xr-x  9 root root 4096 Jul 18 15:47 neutron-20180718T154642Z
 drwxr-xr-x  9 root root 4096 Aug 14 16:13 neutron-20180814T161306Z
 drwxr-xr-x  9 root root 4096 Oct 30 12:43 neutron-20181030T124310Z &lt;&lt;&lt; New venv installed
 drwxr-xr-x 10 root root 4096 May 28 09:30 nova-20180528T092954Z
-   drwxr-xr-x 10 root root 4096 Aug 14 16:13 nova-20180814T161306Z</screen>
+drwxr-xr-x 10 root root 4096 Aug 14 16:13 nova-20180814T161306Z</screen>
   </step>
  </procedure>
 </section>
