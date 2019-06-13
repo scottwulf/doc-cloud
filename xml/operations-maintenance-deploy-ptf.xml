@@ -40,8 +40,7 @@
     repository from a migration or when previous product patches were
     installed.
    </para>
-   <screen>&prompt.ardana;cd /srv/www/suse-12.3/x86_64/repos/PTF/
-&prompt.ardana;sudo rm -rf *</screen>
+   <screen>&prompt.ardana;sudo rm -rf /srv/www/suse-12.3/x86_64/repos/PTF/*</screen>
   </step>
   <step>
    <para>
